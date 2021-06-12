@@ -5,5 +5,4 @@ result=[]
 for i in a:
     if i not in remove_set:
         result.append(i)
-        
 print(result)

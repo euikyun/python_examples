@@ -12,8 +12,8 @@ for i in dir:
         if (i == move[j]):
             nx=x+dx[j]
             ny=y+dy[j]
-        if nx<1 or ny<1 or nx > n or ny > n:
-            continue
+        if nx<1 or ny<1 or nx > n or ny > n: #key point
+            continue    #key point
         x,y=nx,ny
     print('(',x,',',y,')')
 

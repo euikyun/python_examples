@@ -1,4 +1,3 @@
 import sys
-a,b,c = map(int,sys.stdin.readline().split())
+n,m = map(int,sys.stdin.readline().split())
 
-print(a,b,c)

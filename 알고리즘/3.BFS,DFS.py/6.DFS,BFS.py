@@ -11,19 +11,22 @@ graph=[
     [1,7],
 ]
 
-def dfs(graph,v,visited):
-    visited[v]=True
-    print(v,end=' ') #한칸씩 띄워 한줄에 출력
-    for i in graph[v]:
-        if not visited[i]:
-            dfs(graph,i,visited)
+# def dfs(graph,v,visited):
+#     visited[v]=True
+#     print(v,end=' ') #한칸씩 띄워 한줄에 출력
+#     for i in graph[v]:
+#         if not visited[i]:
+#             dfs(graph,i,visited)
 
 
-visited=[False]*9
-dfs(graph,1,visited)
+# visited=[False]*9
+# dfs(graph,1,visited)
 
+#BFS
 def bfs(graph,start,visited2):
-    queue=deque([start])
+    queue=deque()
+    queue.append(start)
+
     visited2[start]=True
     while queue:
         v=queue.popleft()
@@ -35,4 +38,4 @@ def bfs(graph,start,visited2):
 
 
 visited2=[False]*9
-bfs(graph,1,visited)
+bfs(graph,1,visited2)

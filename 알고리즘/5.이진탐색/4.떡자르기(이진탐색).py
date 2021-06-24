@@ -1,30 +1,23 @@
 import sys
-n,m = map(int,sys.stdin.readline().split())
 
-data= list(map(int,input().split()))    #int
-sum=2000000000
-while sum>m:
-    mid=max(data)//2
-    if (sum(data)-mid*n)>=
-        return mid 
+n,target=map(int,sys.stdin.readline().split())
 
-# def bi_sear(array,target,start,end):
-#     while start<=end:
-#         mid = (start+end)//2
-#         if array[mid]==target:
-#             return mid
-#         elif array[mid]>target:
-#             end=mid-1
-#         else:
-#             start=mid+1
-#     return None
+array=list(map(int,sys.stdin.readline().split()))
 
-result=bi_sear(array,target,0,n-1)
+start=0
+end=max(array)
+res=0
+while(start<=end):
+    tot=0
+    mid=(start+end)//2
+    for i in array:
+        if i>mid:
+            tot+=i-mid
+    if tot > target:
+        start=mid+1
+    else:
+        res=mid
+        end=mid-1
 
-if result==None:
-    print("없음")
-else: print(result+1)
+print(res)
 
-
-
-# print(max(array))

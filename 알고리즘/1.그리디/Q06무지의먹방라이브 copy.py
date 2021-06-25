@@ -1,7 +1,3 @@
-import sys
-data = list(map(int,input().split()))    #int
-k=int(sys.stdin.readline().strip())
-
 def solution(food_times,k):
     foods=[]
     n=len(food_times)
@@ -21,9 +17,6 @@ def solution(food_times,k):
             else:
                 k%=n
                 sublist = sorted(foods[i:],key=lambda i:i[1])
-                print(sublist)
                 return sublist[k][1]
         n-=1
     return -1
-
-print(solution(data,k))

@@ -10,12 +10,13 @@ def solution(numbers):
     answer = []
 
     nums=[n for n in numbers] #number를 하나 씩 자르기
+    print(nums)
     per=[]
 
     for i in range(1,len(numbers)+1):  #예) 325라고하면 i를 1~3까지 변화시키며 각각 1개, 2개, 3개 일때의 순열을 모두 출력
         per+=list(permutations(nums,i))
     print(per)
-
+    # new_nums=list(map(int,per))
     new_nums=[int("".join(p)) for p in per] #각각의 순열을 int형으로 변환
     print(new_nums)
 

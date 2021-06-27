@@ -7,4 +7,6 @@ dy=[1,-1,0,0]
 for i in range(4):
     nx=x+dx[i]
     ny=y+dy[i]
-    print('(',nx,',',ny,')')
+    if 0<=nx<5 and 0<=ny<5:
+        print(i+1,"번째 이동")
+        print('(',nx,',',ny,')')
